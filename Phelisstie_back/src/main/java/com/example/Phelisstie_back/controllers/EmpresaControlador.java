@@ -28,4 +28,9 @@ public class EmpresaControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarEmpresa());
     }
+
+    public ResponseEntity<?> buscarPorId(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.BuscarEmpresaPorId((id)));
+    }
+
 }

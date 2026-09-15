@@ -28,4 +28,9 @@ public class Estrategia_MarketingControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarEstrategia_Marketing());
     }
+
+    public ResponseEntity<?> buscarPorId(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarEstrategia_MarketingPorId(id));
+    }
+
 }

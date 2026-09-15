@@ -28,5 +28,11 @@ public class Red_SocialControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarRed_servicio());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> buscarPorId(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarRed_SocialPorId(id));
+    }
+
 }
  

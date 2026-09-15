@@ -28,4 +28,9 @@ public class Publico_ObjetivoControlador {
     public ResponseEntity<?>buscar(){
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarPublico_Objetivo());
     }
+
+    public ResponseEntity<?> buscarPorId(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarPublico_ObjetivoPorId(id));
+    }
+
 }

@@ -29,4 +29,9 @@ public class UsuarioControlador {
         return ResponseEntity.status(HttpStatus.FOUND).body(servicio.buscarUsuarios());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?> buscarPorId(Integer id){
+        return ResponseEntity.status(HttpStatus.FOUND).body(this.servicio.buscarUsuarioPorId(id));
+    }
+
 }
